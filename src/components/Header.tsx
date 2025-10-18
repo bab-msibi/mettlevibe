@@ -9,8 +9,8 @@ export default function Header() {
         <Image
           src="/red-logo-horizontal.webp"
           alt="Logo"
-          width={100}
-          height={100}
+          width={180}
+          height={150}
           priority
         />
       </Link>
