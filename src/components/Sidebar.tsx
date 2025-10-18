@@ -19,9 +19,8 @@ export default function Sidebar() {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed md:static top-0 left-0 h-full md:h-auto w-64 bg-gray-50 border-r border-gray-200 shadow-md transform transition-transform duration-300 z-40
-        ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
-      `}
+        className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-gray-50 border-r border-gray-200 shadow-md transform transition-transform duration-300 z-40
+  ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
       >
         <SidebarLinks />
       </aside>
