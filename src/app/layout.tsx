@@ -23,13 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         {/* Fixed Header */}
         <Header />
 
         {/* Page layout below header */}
-        <div className="flex pt-16 min-h-screen">
+        <div className="flex pt-16 min-h-[calc(100vh-160px)] bg-dark-theme">
           {/* Sidebar (fixed) sits at left, so main content gets padding-left */}
           <div className="flex-1 md:ml-64 p-6">{children}</div>
         </div>
