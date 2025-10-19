@@ -34,7 +34,7 @@ export default function Page() {
             <div className="card1 bg-black-sec text-white rounded-xl shadow-md p-4 hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer">
               <div className="flex justify-between mb-4">
                 <h3 className="text-red-700 font-bold">R1000</h3>
-                <p className="text-red-400">In Progress</p>
+                <p className="text-red-400 font-bold">In Progress</p>
               </div>
               <Image
                 src="/car.jpg"
