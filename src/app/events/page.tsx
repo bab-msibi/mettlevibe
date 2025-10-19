@@ -8,7 +8,6 @@ import Leaderboard from "../tasks/Leaderboard";
 import Discover from "../tasks/Discover";
 import GameFormat from "../tasks/GameFormat";
 import Rules from "../tasks/Rules";
-import { div } from "framer-motion/client";
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState("eventdetails");
@@ -88,7 +87,7 @@ export default function Page() {
             backgroundImage: "url('/hero.jpg')",
           }}
         >
-          <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+          <div className="relative inset-0 bg-black/20 rounded-2xl" />
           <div className="relative z-10 max-w-2xl">
             <h2 className="text-4xl font-bold mb-3">
               Legends of Victory: Battle Royale Cup

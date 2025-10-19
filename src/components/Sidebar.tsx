@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Home, Calendar, Settings, Gamepad2, HelpCircle  } from "lucide-react";
+import {
+  Menu,
+  X,
+  Home,
+  Calendar,
+  Settings,
+  Gamepad2,
+  HelpCircle,
+} from "lucide-react";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +40,7 @@ export default function Sidebar() {
             <a
               key={link.name}
               href={link.href}
-              className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-200 transition-colors"
+              className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-950 transition-colors"
             >
               {link.icon}
               <span>{link.name}</span>
@@ -43,4 +51,3 @@ export default function Sidebar() {
     </>
   );
 }
-

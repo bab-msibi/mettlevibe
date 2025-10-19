@@ -1,42 +1,74 @@
-import Sidebar from "@/components/Sidebar";
+"use client";
+
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import Sidebar from "../../components/Sidebar";
 import Discover from "../tasks/Discover";
 
-export default function Page() {
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQ[] = [
+  {
+    question: "Why choose us?",
+    answer:
+      "We offer a seamless esports experience with verified tournaments, secure payments, and real-time updates.",
+  },
+  {
+    question: "How do I join a tournament?",
+    answer:
+      "Simply sign up, choose your preferred tournament, and click 'Join Now'. You’ll get all match info via email.",
+  },
+  {
+    question: "Is it free to play?",
+    answer:
+      "Some tournaments are free, while others may have entry fees that contribute to the prize pool.",
+  },
+];
+
+export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div>
-      <div>
-        <Sidebar />
+      <Sidebar />
+
+      <div className="w-[1200px] mt-2">
+        <h1 className="text-3xl mb-6">Frequently Asked Questions</h1>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-700 rounded-lg overflow-hidden bg-black-sec text-white"
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex justify-between items-center p-4 text-left hover:bg-gray-800 transition"
+              >
+                <span className="font-medium">{faq.question}</span>
+                {openIndex === index ? (
+                  <ChevronUp size={20} />
+                ) : (
+                  <ChevronDown size={20} />
+                )}
+              </button>
+
+              {openIndex === index && (
+                <div className="p-4 border-t border-gray-700 text-gray-300">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-      <h1 className="text-3xl">Event Rules</h1>
-      <br />
-      <p>
-        This rulebook establishes the guidelines that must always be followed
-        when participating in any Mettlestate competition or tournament,
-        including those hosted by Mettlestate on behalf of another company or
-        sponsor. Failure to comply with these rules may result in penalties as
-        outlined.
-        <br /><br />
-        Decisions made by Mettlestate administrators are final, particularly
-        when made to uphold fair play and sportsmanship, even if not explicitly
-        detailed in this rulebook. We reserve the right to modify, expand, or
-        remove rules as needed to ensure a fair and enjoyable competitive
-        environment.
-        <br /><br />
-        Only the latest version of the rulebook is valid; rules from previous
-        events no longer apply. Our commitment is to provide an exciting, fair,
-        and fun experience for all participants.
-      </p>
-      <br />
-      <h3>PLAYER ELIGIBILITY</h3>
-      <p>All players participating in Mettlestate PUBG Mobile Cup must have a valid PUBG Mobile ID.</p>
-      <br />
-      <h3>Nationality and Residence</h3>
-      <p>- This is a NATIONAL and SUB-SAHARAN Africa cup only. 
-<br />
-- South African players can be paid their winnings via their South African bank accounts or PayPal accounts.  
-<br />
-- If the team is not in South Africa or does not have a South African bank account, the team must have a valid PayPal account to receive their winnings.  </p>
-    <Discover />
+      <Discover />
     </div>
   );
 }
