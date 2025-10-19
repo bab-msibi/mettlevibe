@@ -7,6 +7,8 @@ import { useState } from "react";
 import Leaderboard from "../tasks/Leaderboard";
 import Discover from "../tasks/Discover";
 import GameFormat from "../tasks/GameFormat";
+import Rules from "../tasks/Rules";
+import { div } from "framer-motion/client";
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState("eventdetails");
@@ -46,6 +48,9 @@ export default function Page() {
                 Elimination
               </h2>
             </div>
+            <div>
+              <GameFormat />
+            </div>
           </div>
         );
       case "LeaderBoard":
@@ -63,7 +68,9 @@ export default function Page() {
         );
       case "Rules":
         return (
-          <p>Need help? Reach out to us via chat or email for quick support.</p>
+          <div> 
+            <Rules />
+          </div>
         );
       default:
         return null;
@@ -136,17 +143,6 @@ export default function Page() {
             </motion.div>
           </AnimatePresence>
         </div>
-
-       <div>
-        <GameFormat />
-       </div>
-
-        <section className="mb-6 mt-20">
-          <h1 className="text-3xl font-semibold">Discover Tournaments</h1>
-          <p className="text-slate-500 mt-1">
-            Choose a game & Join the Tournament.
-          </p>
-        </section>
 
         <div>
           <Discover />
