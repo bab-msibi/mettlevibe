@@ -4,6 +4,7 @@ import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Leaderboard from "../tasks/Leaderboard";
 
 export default function Page() {
   const [activeTab, setActiveTab] = useState("eventdetails");
@@ -69,22 +70,16 @@ export default function Page() {
 
   return (
     <div className="flex flex-1">
-      {/* Sidebar */}
       <Sidebar />
 
-      {/* Main content */}
       <main className="flex-1">
-        {/* Hero Section */}
         <section
           className="relative bg-cover bg-center text-white rounded-2xl p-20 mb-10 overflow-hidden"
           style={{
             backgroundImage: "url('/hero.jpg')",
           }}
         >
-          {/* Overlay */}
           <div className="absolute inset-0 bg-black/20 rounded-2xl" />
-
-          {/* Content */}
           <div className="relative z-10 max-w-2xl">
             <h2 className="text-4xl font-bold mb-3">
               Legends of Victory: Battle Royale Cup
@@ -98,7 +93,6 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Tabs Section */}
         <div className="mb-8 border-b border-slate-700 flex space-x-6 relative">
           {tabs.map((tab) => (
             <button
@@ -112,7 +106,6 @@ export default function Page() {
             >
               {tab.label}
 
-              {/* Animated underline */}
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="activeTabIndicator"
@@ -128,7 +121,6 @@ export default function Page() {
           ))}
         </div>
 
-        {/* Tab Content */}
         <div className="min-h-[150px]">
           <AnimatePresence mode="wait">
             <motion.div
@@ -143,6 +135,10 @@ export default function Page() {
           </AnimatePresence>
         </div>
 
+        <div>
+          <Leaderboard />
+        </div>
+
         <section className="mb-6 mt-20">
           <h1 className="text-3xl font-semibold">Discover Tournaments</h1>
           <p className="text-slate-500 mt-1">
@@ -155,7 +151,7 @@ export default function Page() {
             <img
               src="/car.jpg"
               alt="Game 1"
-              className="w-full h-40 object-cover"
+              className="w-full h-60 object-cover"
             />
             <div className="p-4 flex justify-between">
               <p className="text-gray-100 font-semibold">Car Race 2</p>
@@ -166,7 +162,7 @@ export default function Page() {
             <img
               src="/fps.jpg"
               alt="Game 2"
-              className="w-full h-40 object-cover"
+              className="w-full h-60 object-cover"
             />
             <div className="p-4 flex justify-between">
               <p className="text-gray-100 font-semibold">Shainline</p>
@@ -177,7 +173,7 @@ export default function Page() {
             <img
               src="/fifa.jpg"
               alt="Game 3"
-              className="w-full h-40 object-cover"
+              className="w-full h-60 object-cover"
             />
             <div className="p-4 flex justify-between">
               <p className="text-gray-100 font-semibold">Fifa 2019</p>
@@ -186,12 +182,12 @@ export default function Page() {
           </div>
           <div className="bg-black-sec text-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer">
             <img
-              src="/images/game4.jpg"
+              src="/gb.jpg"
               alt="Game 4"
-              className="w-full h-40 object-cover"
+              className="w-full h-60 object-cover"
             />
             <div className="p-4 flex justify-between">
-              <p className="text-gray-100 font-semibold">Game 1</p>
+              <p className="text-gray-100 font-semibold">Gunship Battle</p>
               <p className="text-amber-500 font-bold text-sm">R1000</p>
             </div>
           </div>
