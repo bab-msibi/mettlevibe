@@ -1,15 +1,16 @@
-"use client";
-
 import { useEffect, useState } from "react";
+
+interface Address {
+  suite: string;
+}
 
 interface User {
   id: number;
   name: string;
-  address: {
-    suite: string;
-  };
-  rank?: number;
+  email: string;
+  address: Address;
   points?: number;
+  rank?: number;
 }
 
 export default function Leaderboard() {
@@ -18,17 +19,17 @@ export default function Leaderboard() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      const data = await res.json();
+      const data: User[] = await res.json();
 
       const cleaned = data
-        .map((user: any) => {
-          const suite = user?.address?.suite || "";
-          const points = parseInt(suite.replace(/\D/g, ""), 10);
+        .map((user) => {
+          const suite = user?.address?.suite ?? "";
+          const points = parseInt(suite.replace(/\D/g, ""), 10) || 0;
           return { ...user, points };
         })
-        .sort((a: User, b: User) => b.points - a.points)
+        .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
         .slice(0, 10)
-        .map((user: User, index: number) => ({
+        .map((user, index) => ({
           ...user,
           rank: index + 1,
         }));
@@ -39,12 +40,13 @@ export default function Leaderboard() {
     fetchData();
   }, []);
 
-  const getRankStyle = (rank: number) => {
+    const getRankStyle = (rank: number) => {
     if (rank === 1) return "bg-yellow-500/20 text-yellow-300 font-semibold";
     if (rank === 2) return "bg-yellow-500/20 text-yellow-300 font-semibold";
     if (rank === 3) return "bg-yellow-500/20 text-yellow-300 font-semibold";
     return "";
   };
+
 
   return (
     <div className="flex justify-center mt-8 ">
