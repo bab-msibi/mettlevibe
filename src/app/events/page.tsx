@@ -5,9 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-
 export default function Page() {
-    const [activeTab, setActiveTab] = useState("eventdetails");
+  const [activeTab, setActiveTab] = useState("eventdetails");
 
   const tabs = [
     { id: "eventdetails", label: "Event Details" },
@@ -74,16 +73,16 @@ export default function Page() {
       <Sidebar />
 
       {/* Main content */}
-      <main className="flex-1 text-center">
+      <main className="flex-1">
         {/* Hero Section */}
         <section
           className="relative bg-cover bg-center text-white rounded-2xl p-20 mb-10 overflow-hidden"
           style={{
-            backgroundImage: "url('/hero1.jpg')",
+            backgroundImage: "url('/hero.jpg')",
           }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/50 rounded-2xl" />
+          <div className="absolute inset-0 bg-black/20 rounded-2xl" />
 
           {/* Content */}
           <div className="relative z-10 max-w-2xl">
@@ -116,7 +115,7 @@ export default function Page() {
               {/* Animated underline */}
               {activeTab === tab.id && (
                 <motion.div
-                  layoutId="activeTabIndicator" 
+                  layoutId="activeTabIndicator"
                   className="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-400 rounded-full"
                   transition={{
                     type: "spring",
@@ -151,7 +150,52 @@ export default function Page() {
           </p>
         </section>
 
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+          <div className="bg-black-sec text-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer">
+            <img
+              src="/car.jpg"
+              alt="Game 1"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4 flex justify-between">
+              <p className="text-gray-100 font-semibold">Car Race 2</p>
+              <p className="text-amber-500 font-bold text-sm">R1000</p>
+            </div>
+          </div>
+          <div className="bg-black-sec text-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer">
+            <img
+              src="/fps.jpg"
+              alt="Game 2"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4 flex justify-between">
+              <p className="text-gray-100 font-semibold">Shainline</p>
+              <p className="text-amber-500 font-bold text-sm">R1000</p>
+            </div>
+          </div>
+          <div className="bg-black-sec text-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer">
+            <img
+              src="/fifa.jpg"
+              alt="Game 3"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4 flex justify-between">
+              <p className="text-gray-100 font-semibold">Fifa 2019</p>
+              <p className="text-amber-500 font-bold text-sm">R1000</p>
+            </div>
+          </div>
+          <div className="bg-black-sec text-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer">
+            <img
+              src="/images/game4.jpg"
+              alt="Game 4"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4 flex justify-between">
+              <p className="text-gray-100 font-semibold">Game 1</p>
+              <p className="text-amber-500 font-bold text-sm">R1000</p>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );

@@ -33,9 +33,7 @@ export default function Footer() {
 
         {/* Right Section (Contact Info + Socials) */}
         <div className="text-center md:text-right">
-          <p>
-            Email: <span className="text-yellow-400">umc@mtu.edu</span>
-          </p>
+          <p className="text-white font-bold text-sm">Follow Us On Socials</p>
 
           {/* Social Icons */}
           <div className="flex justify-center md:justify-end space-x-3 mt-4">

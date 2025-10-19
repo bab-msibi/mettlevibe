@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Home, User, Settings } from "lucide-react";
+import { Menu, X, Home, Calendar, Settings, Gamepad2, HelpCircle  } from "lucide-react";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { name: "Home", icon: <Home size={18} />, href: "/" },
-    { name: "Events", icon: <User size={18} />, href: "/events" },
+    { name: "Events", icon: <Calendar size={18} />, href: "/events" },
+    { name: "Games", icon: <Gamepad2 size={18} />, href: "/games" },
+    { name: "FAQs", icon: <HelpCircle size={18} />, href: "/faqs" },
     { name: "Settings", icon: <Settings size={18} />, href: "/settings" },
   ];
 
