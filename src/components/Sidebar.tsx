@@ -16,7 +16,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden p-3 fixed top-4 left-4 z-50 bg-gray-100 rounded-lg shadow-md"
@@ -24,7 +23,6 @@ export default function Sidebar() {
         {isOpen ? <X /> : <Menu />}
       </button>
 
-      {/* Sidebar Container */}
       <aside
         className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-black-sec border-r border-black shadow-md transform transition-transform duration-300 z-40
   ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
