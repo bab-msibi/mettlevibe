@@ -7,7 +7,6 @@ import {
   FaYoutube,
   FaPinterestP,
   FaSnapchatGhost,
-  FaVimeoV,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -78,12 +77,6 @@ export default function Footer() {
               className="bg-[#FFFC00] text-black p-2 rounded-full hover:opacity-80"
             >
               <FaSnapchatGhost size={16} />
-            </a>
-            <a
-              href="#"
-              className="bg-[#1AB7EA] p-2 rounded-full hover:opacity-80"
-            >
-              <FaVimeoV size={16} />
             </a>
           </div>
         </div>
