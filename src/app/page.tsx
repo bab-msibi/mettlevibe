@@ -13,7 +13,7 @@ export default function Page() {
             alt="Hero Image"
             width={1200}
             height={200}
-            className="rounded-md object-contain"
+            className="rounded-md object-contain min-w-full"
           />
           <div className="flex justify-between bg-black-sec border-rounded-md">
             <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold">PC Builder PUBG Mobile Cup</h1>
