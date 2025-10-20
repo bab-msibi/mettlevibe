@@ -6,12 +6,12 @@ export default function FAQs() {
       <div className="space-y-4">
         <details className="bg-black-sec p-4 rounded-lg shadow-sm">
           <summary className="font-semibold cursor-pointer">
-            I'm up against TBC/TBD/BYE. Who is that?
+            I&#39;m up against TBC/TBD/BYE. Who is that?
           </summary>
           <p className="mt-2 text-gray-500">
             <br />
             -The website indicates TBC/TBD/BYE as your opponent when you are
-            waiting for an opponent that's on the previous round.
+            waiting for an opponent that&#39;s on the previous round.
             <br />
             -Please wait patiently and keep an eye on your notifications.
           </p>
@@ -34,7 +34,7 @@ export default function FAQs() {
 
         <details className="bg-black-sec p-4 rounded-lg shadow-sm">
           <summary className="font-semibold cursor-pointer">
-            What happens if my oppponent doesn't show up?
+            What happens if my oppponent doesn&#39;t show up?
           </summary>
           <p className="mt-2 text-gray-500">
             <br />- Teams have 10 minutes to appear after the scheduled match
@@ -63,7 +63,7 @@ export default function FAQs() {
             How Do I check In?
           </summary>
           <p className="mt-2 text-gray-500">
-            <br />- 1 Hour before the cup's Scheduled start time check-ins will
+            <br />- 1 Hour before the cup&#39;s Scheduled start time check-ins will
             open
             <br />
             -Navigate back to the same page where you checked in
@@ -80,7 +80,7 @@ export default function FAQs() {
             How Do I check In?
           </summary>
           <p className="mt-2 text-gray-500">
-            <br />- Navigate to the "Events" tab
+            <br />- Navigate to the &#39;Events&#39; tab
             <br />
             -Click the Tournament Event
             <br />

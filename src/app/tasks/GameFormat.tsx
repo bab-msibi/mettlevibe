@@ -1,4 +1,4 @@
-import { Album, Wallet, Gamepad, Users, Settings } from "lucide-react";
+import { Album, Wallet, Gamepad, Users} from "lucide-react";
 
 export default function Page() {
   return (
