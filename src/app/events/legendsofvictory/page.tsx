@@ -38,17 +38,17 @@ export default function Page() {
             </div>
 
             <div className="text-center">
-              <h2>
-                <span className="date">Date & Time:</span> August 10, 2025 at
-                6PM SAST | <span className="date">Location:</span> Online -
+              <h1 className="text-2xl font-bold mt-4">
+                <span className="text-amber-700">Date & Time:</span> August 10, 2025 at
+                6PM SAST | <span className="text-amber-700">Location:</span> Online -
                 Streamed live on Twitch
-              </h2>
+              </h1>
               <br></br>
-              <h2>
-                <span className="date">Price Pool:</span> R50,000 |{" "}
-                <span className="date">Format:</span> Round Robin, Double
+              <h1 className="text-2xl font-bold mb-2">
+                <span className="text-amber-700">Price Pool:</span> R50,000 |{" "}
+                <span className="text-amber-700">Format:</span> Round Robin, Double
                 Elimination
-              </h2>
+              </h1>
             </div>
             <div>
               <GameFormat />
@@ -62,12 +62,7 @@ export default function Page() {
           </div>
         );
       case "Faqs":
-        return (
-          <p>
-            Learn more about MettleState and how we connect you with trusted
-            professionals.
-          </p>
-        );
+        return <></>;
       case "Rules":
         return (
           <div>
@@ -108,8 +103,10 @@ export default function Page() {
             {isOpen && (
               <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
                 <div className="bg-black-sec rounded-xl shadow-lg w-full max-w-md relative">
-                  <button onClick={() => setIsOpen(false)}
-                    className="absolute top-3 right-3 text-gray-200 hover:text-black text-2xl">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="absolute top-3 right-3 text-gray-200 hover:text-black text-2xl"
+                  >
                     &times;
                   </button>
                   <Rform />

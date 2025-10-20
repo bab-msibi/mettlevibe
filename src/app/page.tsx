@@ -9,16 +9,17 @@ export default function Page() {
       <main className="flex-1">
         <div className="Hero">
           <Image
-            src="/pcb.png"
+            src="/30k.gif"
             alt="Hero Image"
             width={1200}
             height={200}
             className="rounded-md object-contain min-w-full"
           />
           <div className="flex justify-between bg-black-sec border-rounded-md">
-            <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold">PC Builder PUBG Mobile Cup</h1>
+            <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold text-2xl">
+              Centrum Energy: 30K Challenge</h1>
             <button className="m-4 px-6 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 transition cursor-pointer">
-              Join Event
+              View Event
             </button>
           </div>
         </div>
