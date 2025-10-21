@@ -11,6 +11,7 @@ import Rform from "../../tasks/Rform";
 import Lfaqs from "../../tasks/Lfaqs";
 import TinkiesAd from "../../tasks/TinkiesAd";
 import Participants from "../../tasks/Participants";
+import Image from "next/image";
 
 export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,17 +29,14 @@ export default function Page() {
       case "Overview":
         return (
           <div>
-            <div className="text-center">
+            <div className="text-center flex justify-center items-center gap-10">
               <h1 className="text-2xl font-bold mt-4">
-                <span className="text-amber-700">Date & Time:</span> August 10,
-                2025 at 6PM SAST |{" "}
-                <span className="text-amber-700">Location:</span> Online -
-                Streamed live on Twitch
+                <span className="text-amber-700">Date & Time:</span> August 10, 2025 at 6PM SAST <br />
+                <span className="text-amber-700 mt-6">Location:</span> Online - Streamed live on Twitch
               </h1>
-              <br></br>
-              <h1 className="text-2xl font-bold mb-2">
-                <span className="text-amber-700">Price Pool:</span> R50,000 |{" "}
-                <span className="text-amber-700">Format:</span> Round Robin,
+              <h1 className="text-2xl font-bold mt-4">
+                <span className="text-amber-700">Prize Pool:</span> R50,000 <br /> 
+                <span className="text-amber-700 mt-6">Format:</span> Round Robin
                 Double Elimination
               </h1>
             </div>
