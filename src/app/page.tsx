@@ -16,7 +16,7 @@ export default function Page() {
             className="rounded-md object-contain min-w-full"
           />
           <div className="flex justify-between bg-black-sec border-rounded-md">
-            <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold text-2xl">
+            <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold text-base sm:text-lg md:text-2xl">
               Centrum Energy: 30K Challenge</h1>
             <button className="m-4 px-6 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 transition cursor-pointer">
               View Event

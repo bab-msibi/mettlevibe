@@ -39,15 +39,16 @@ export default function Page() {
 
             <div className="text-center">
               <h1 className="text-2xl font-bold mt-4">
-                <span className="text-amber-700">Date & Time:</span> August 10, 2025 at
-                6PM SAST | <span className="text-amber-700">Location:</span> Online -
+                <span className="text-amber-700">Date & Time:</span> August 10,
+                2025 at 6PM SAST |{" "}
+                <span className="text-amber-700">Location:</span> Online -
                 Streamed live on Twitch
               </h1>
               <br></br>
               <h1 className="text-2xl font-bold mb-2">
                 <span className="text-amber-700">Price Pool:</span> R50,000 |{" "}
-                <span className="text-amber-700">Format:</span> Round Robin, Double
-                Elimination
+                <span className="text-amber-700">Format:</span> Round Robin,
+                Double Elimination
               </h1>
             </div>
             <div>
@@ -87,7 +88,7 @@ export default function Page() {
         >
           <div className="relative inset-0 bg-black/50 rounded-2xl" />
           <div className="relative z-10 max-w-2xl">
-            <h2 className="text-4xl font-bold mb-3 text-white shadow-lg shadow-black/90">
+            <h2 className="text-base sm:text-lg md:text-2xl lg:text-4xl font-bold mb-3 text-white shadow-lg shadow-black/90">
               Legends of Victory: Battle Royale Cup
             </h2>
             <p className="text-lg text-gray-100 mb-6">

@@ -17,7 +17,7 @@ export default function Page() {
             className="rounded-md object-contain min-w-full"
           />
           <div className="flex justify-between bg-black-sec border-rounded-md">
-            <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold text-2xl">
+            <h1 className="text-amber-100 flex items-center text-center ml-4 font-bold text-base sm:text-lg md:text-2xl">
               <Image 
                 src="/pcbuilder.webp"
                 alt="PCB Logo"

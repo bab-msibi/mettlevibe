@@ -51,7 +51,7 @@ export default function Leaderboard() {
   return (
     <div className="flex justify-center mt-8 ">
       <div className="bg-black-sec text-white rounded-xl shadow-md overflow-hidden">
-        <table className="w-[1200px] text-left border-collapse">
+        <table className="w-full max-w-[1200px] text-left border-collapse">
           <thead className="bg-gray-900">
             <tr>
               <th className="px-6 py-3 border-b border-gray-700">Rank</th>

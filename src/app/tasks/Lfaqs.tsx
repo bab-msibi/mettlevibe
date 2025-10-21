@@ -1,6 +1,6 @@
 export default function FAQs() {
   return (
-    <div className="max-w-[1200px] mt-4 p-6 items-center mx-auto">
+    <div className="w-full max-w-[1200px] mt-4 p-6 items-center mx-auto">
       <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
 
       <div className="space-y-4">
