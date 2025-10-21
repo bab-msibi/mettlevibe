@@ -12,9 +12,7 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-black-sec text-white py-10 px-6 border-t border-slate-800 mt-auto">
-      {/* Main content */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
-        {/* Left Section (Logo + tagline) */}
         <div className="flex items-center space-x-4">
           <Image
             src="/red-logo-horizontal.webp"
@@ -30,11 +28,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right Section (Contact Info + Socials) */}
         <div className="text-center md:text-right">
           <p className="text-white font-bold text-sm">Follow Us On Socials</p>
 
-          {/* Social Icons */}
           <div className="flex justify-center md:justify-end space-x-3 mt-4">
             <a
               href="#"
@@ -82,7 +78,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Text */}
       <div className="text-center text-slate-500 text-sm mt-8 border-t border-slate-800 pt-4">
         © {new Date().getFullYear()} MettleState. All rights reserved.
       </div>
