@@ -58,7 +58,7 @@ export default function Page() {
               <Link href="/events/legendsofvictory">
               <div className="flex justify-between mb-4">
                 <h3 className="text-amber-500">R1000</h3>
-                <p className="text-slate-400">October 18, 2025</p>
+                <p className="text-slate-400">October 19, 2025</p>
               </div>
               <Image
                 src="/lov.jpg"
