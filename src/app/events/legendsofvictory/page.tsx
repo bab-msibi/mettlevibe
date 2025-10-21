@@ -1,7 +1,6 @@
 "use client";
 
 import Sidebar from "@/components/Sidebar";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Leaderboard from "../../tasks/Leaderboard";
@@ -10,33 +9,25 @@ import GameFormat from "../../tasks/GameFormat";
 import Rules from "../../tasks/Rules";
 import Rform from "../../tasks/Rform";
 import Lfaqs from "../../tasks/Lfaqs";
+import TinkiesAd from "../../tasks/TinkiesAd";
+import Participants from "../../tasks/Participants";
 
 export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("eventdetails");
+  const [activeTab, setActiveTab] = useState("Overview");
 
   const tabs = [
-    { id: "eventdetails", label: "Event Details" },
+    { id: "Overview", label: "Overview" },
     { id: "LeaderBoard", label: "Leaderboard" },
-    { id: "Faqs", label: "FAQs" },
+    { id: "Participants", label: "Participants" },
     { id: "Rules", label: "Rules" },
   ];
 
   const renderContent = () => {
     switch (activeTab) {
-      case "eventdetails":
+      case "Overview":
         return (
           <div>
-            <div className="mb-8 flex justify-center">
-              <Image
-                src="/hero1.jpg"
-                alt="event deatails"
-                width={400}
-                height={100}
-                className="rounded-md object-contain"
-              />
-            </div>
-
             <div className="text-center">
               <h1 className="text-2xl font-bold mt-4">
                 <span className="text-amber-700">Date & Time:</span> August 10,
@@ -54,6 +45,13 @@ export default function Page() {
             <div>
               <GameFormat />
             </div>
+            <div>
+              <Lfaqs />
+            </div>
+
+            <div>
+              <Discover />
+            </div>
           </div>
         );
       case "LeaderBoard":
@@ -62,8 +60,12 @@ export default function Page() {
             <Leaderboard />
           </div>
         );
-      case "Faqs":
-        return <></>;
+      case "Participants":
+        return (
+        <div>
+          <Participants />
+        </div>
+        );
       case "Rules":
         return (
           <div>
@@ -81,12 +83,12 @@ export default function Page() {
 
       <main className="flex-1">
         <section
-          className="relative bg-cover bg-center text-white rounded-2xl p-20 mb-10 overflow-hidden"
+          className=" relative bg-cover bg-center text-white rounded-2xl p-20 mb-10 overflow-hidden"
           style={{
             backgroundImage: "url('/lov-hero.jpg')",
           }}
         >
-          <div className="relative inset-0 bg-black/50 rounded-2xl" />
+          <div className="relative inset-0 bg-black/10 rounded-2xl " />
           <div className="relative z-10 max-w-2xl">
             <h2 className="text-base sm:text-lg md:text-2xl lg:text-4xl font-bold mb-3 text-white shadow-lg shadow-black/90">
               Legends of Victory: Battle Royale Cup
@@ -124,7 +126,7 @@ export default function Page() {
               onClick={() => setActiveTab(tab.id)}
               className={`relative pb-2 text-lg font-medium transition-colors ${
                 activeTab === tab.id
-                  ? "text-blue-400"
+                  ? "text-amber-700"
                   : "text-slate-400 hover:text-slate-200"
               }`}
             >
@@ -133,7 +135,7 @@ export default function Page() {
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="activeTabIndicator"
-                  className="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-400 rounded-full"
+                  className="absolute bottom-0 left-0 right-0 h-[3px] bg-amber-700 rounded-full"
                   transition={{
                     type: "spring",
                     stiffness: 500,
@@ -144,6 +146,8 @@ export default function Page() {
             </button>
           ))}
         </div>
+
+        <TinkiesAd />
 
         <div className="min-h-[150px]">
           <AnimatePresence mode="wait">
@@ -157,14 +161,6 @@ export default function Page() {
               {renderContent()}
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        <div>
-          <Lfaqs />
-        </div>
-
-        <div>
-          <Discover />
         </div>
       </main>
     </div>

@@ -1,96 +1,88 @@
+import Image from "next/image";
+
 export default function FAQs() {
   return (
-    <div className="w-full max-w-[1200px] mt-4 p-6 items-center mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+    <div className="max-w-[1450px] mx-auto mt-6 p-6 grid grid-cols-1 lg:grid-cols-[70%_30%] gap-8 items-start">
+      <div>
+        <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
 
-      <div className="space-y-4">
-        <details className="bg-black-sec p-4 rounded-lg shadow-sm">
-          <summary className="font-semibold cursor-pointer">
-            I&#39;m up against TBC/TBD/BYE. Who is that?
-          </summary>
-          <p className="mt-2 text-gray-500">
-            <br />
-            -The website indicates TBC/TBD/BYE as your opponent when you are
-            waiting for an opponent that&#39;s on the previous round.
-            <br />
-            -Please wait patiently and keep an eye on your notifications.
-          </p>
-        </details>
+        <div className="space-y-4">
+          <details className="bg-black-sec p-4 rounded-lg shadow-sm">
+            <summary className="font-semibold cursor-pointer">
+              I&#39;m up against TBC/TBD/BYE. Who is that?
+            </summary>
+            <p className="mt-2 text-gray-400">
+              - The website indicates TBC/TBD/BYE as your opponent when you are
+              waiting for an opponent that&#39;s on the previous round.
+              <br />- Please wait patiently and keep an eye on your
+              notifications.
+            </p>
+          </details>
 
-        <details className="bg-black-sec p-4 rounded-lg shadow-sm">
-          <summary className="font-semibold cursor-pointer">
-            How Do I edit/UPdate my game ID?
-          </summary>
-          <p className="mt-2 text-gray-500">
-            - At the Top right of your screen click on your name <br />- Go to
-            Profile
-            <br />
-            -Click on Settings <br />
-            -Navigate to Link Game Accounts
-            <br />- Find the Account you want to update and once complete click
-            the Tick to confirm
-          </p>
-        </details>
+          <details className="bg-black-sec p-4 rounded-lg shadow-sm">
+            <summary className="font-semibold cursor-pointer">
+              How do I edit/update my game ID?
+            </summary>
+            <p className="mt-2 text-gray-400">
+              - Click on your name at the top right. <br />- Go to Profile →
+              Settings → Link Game Accounts. <br />- Update your ID and click
+              the tick to confirm.
+            </p>
+          </details>
 
-        <details className="bg-black-sec p-4 rounded-lg shadow-sm">
-          <summary className="font-semibold cursor-pointer">
-            What happens if my oppponent doesn&#39;t show up?
-          </summary>
-          <p className="mt-2 text-gray-500">
-            <br />- Teams have 10 minutes to appear after the scheduled match
-            time
-            <br />- Failure to appear results in a match forfeit
-            <br />- Both teams must be fully present to start
-          </p>
-        </details>
+          <details className="bg-black-sec p-4 rounded-lg shadow-sm">
+            <summary className="font-semibold cursor-pointer">
+              What happens if my opponent doesn&#39;t show up?
+            </summary>
+            <p className="mt-2 text-gray-400">
+              - Teams have 10 minutes to appear after the scheduled match time.
+              <br />- Failure to appear results in a forfeit.
+              <br />- Both teams must be fully present to start.
+            </p>
+          </details>
 
-        <details className="bg-black-sec p-4 rounded-lg shadow-sm">
-          <summary className="font-semibold cursor-pointer">
-            How do I see my match?
-          </summary>
-          <p className="mt-2 text-gray-500">
-            <br />
-            -On the Event Page of the Cup you are playing in Click the Matches
-            tab after the bracket has been created to see your event.
-            <br />
-            -You can also click on the bracket tab and then on your match to
-            view your current match.
-          </p>
-        </details>
+          <details className="bg-black-sec p-4 rounded-lg shadow-sm">
+            <summary className="font-semibold cursor-pointer">
+              How do I see my match?
+            </summary>
+            <p className="mt-2 text-gray-400">
+              - On the Event Page → click the “Matches” tab after the bracket is
+              created. <br />- You can also view it under the “Bracket” tab and
+              click your match.
+            </p>
+          </details>
 
-        <details className="bg-black-sec p-4 rounded-lg shadow-sm">
-          <summary className="font-semibold cursor-pointer">
-            How Do I check In?
-          </summary>
-          <p className="mt-2 text-gray-500">
-            <br />- 1 Hour before the cup&#39;s Scheduled start time check-ins will
-            open
-            <br />
-            -Navigate back to the same page where you checked in
-            <br />
-            -Click the Red Check-in button and you will be in
-            <br />
-            -Some events have limited check-ins & are on a first come first
-            serve basis
-          </p>
-        </details>
+          <details className="bg-black-sec p-4 rounded-lg shadow-sm">
+            <summary className="font-semibold cursor-pointer">
+              How do I check in?
+            </summary>
+            <p className="mt-2 text-gray-400">
+              - Check-ins open 1 hour before the start time. <br />- Click the
+              Red Check-in button on the same event page.
+            </p>
+          </details>
 
-        <details className="bg-black-sec p-4 rounded-lg shadow-sm">
-          <summary className="font-semibold cursor-pointer">
-            How Do I check In?
-          </summary>
-          <p className="mt-2 text-gray-500">
-            <br />- Navigate to the &#39;Events&#39; tab
-            <br />
-            -Click the Tournament Event
-            <br />
-            -Once in, Click the Red sign up button
-            <br />
-            -Select yourself or your team that you want to enter
-            <br />
-            -Click done and you are in
-          </p>
-        </details>
+          <details className="bg-black-sec p-4 rounded-lg shadow-sm">
+            <summary className="font-semibold cursor-pointer">
+              How do I sign up for an event?
+            </summary>
+            <p className="mt-2 text-gray-400">
+              - Navigate to the “Events” tab. <br />- Click the tournament
+              event, then the red “Sign up” button. <br />- Select yourself or
+              your team → click “Done”.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <div className="hidden lg:flex justify-center items-center">
+        <Image 
+        src="/tinkies-banner.png"
+        alt="banner-long"
+        width={250}
+        height={500}
+        className="bg-cover"
+        />
       </div>
     </div>
   );
