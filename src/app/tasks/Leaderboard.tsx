@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loading from "../../components/LoadingSkelton";
 
 interface Address {
   suite: string;
@@ -15,38 +16,48 @@ interface User {
 
 export default function Leaderboard() {
   const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      const data: User[] = await res.json();
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+        const data: User[] = await res.json();
 
-      const cleaned = data
-        .map((user) => {
-          const suite = user?.address?.suite ?? "";
-          const points = parseInt(suite.replace(/\D/g, ""), 10) || 0;
-          return { ...user, points };
-        })
-        .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
-        .slice(0, 10)
-        .map((user, index) => ({
-          ...user,
-          rank: index + 1,
-        }));
+        const cleaned = data
+          .map((user) => {
+            const suite = user?.address?.suite ?? "";
+            const points = parseInt(suite.replace(/\D/g, ""), 10) || 0;
+            return { ...user, points };
+          })
+          .sort((a, b) => (b.points ?? 0) - (a.points ?? 0))
+          .slice(0, 10)
+          .map((user, index) => ({
+            ...user,
+            rank: index + 1,
+          }));
 
-      setUsers(cleaned);
+        setUsers(cleaned);
+      } catch (error) {
+        console.error("Failed to fetch users:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, []);
 
-    const getRankStyle = (rank: number) => {
+  const getRankStyle = (rank: number) => {
     if (rank === 1) return "bg-yellow-500/20 text-yellow-300 font-semibold";
     if (rank === 2) return "bg-yellow-500/20 text-yellow-300 font-semibold";
     if (rank === 3) return "bg-yellow-500/20 text-yellow-300 font-semibold";
     return "";
   };
 
+if (loading) {
+  return <Loading />;
+}
 
   return (
     <div className="flex justify-center mt-8 ">
