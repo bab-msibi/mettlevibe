@@ -62,9 +62,9 @@ export default function Page() {
         );
       case "Participants":
         return (
-        <div>
-          <Participants />
-        </div>
+          <div>
+            <Participants />
+          </div>
         );
       case "Rules":
         return (
@@ -78,16 +78,13 @@ export default function Page() {
   };
 
   return (
-    <div>
+    <div className="flex flex-1">
       <Sidebar />
 
       <main className="flex-1">
         <section
-          className="relative bg-cover bg-center self-center-safe w-full text-white rounded-2xl p-20 mb-10 overflow-hidden"
-          style={{
-            backgroundImage: "url('/hero2.jpg')",
-          }}
-          
+          className="relative bg-cover bg-center text-white rounded-2xl p-10 sm:p-16 lg:p-20 mb-10 overflow-hidden"
+          style={{ backgroundImage: "url('/hero2.jpg')" }}
         >
           <div className="relative inset-0 bg-black/10 rounded-2xl " />
           <div className="relative z-10 max-w-2xl">

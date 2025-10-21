@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div>
       <h1 className="text-4xl font-bold pl-6">Participants</h1>
-      <div className="grid grid-cols-6 gap-4 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
         <div className="bg-black-sec text-white rounded-2xl pt-12 hover:shadow-lg hover:scale-[1.03] hover:brightness-130 transition-all transform duration-300 cursor-pointer">
           <div className="flex justify-center">
             <Image
