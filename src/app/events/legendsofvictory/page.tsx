@@ -78,14 +78,14 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-1">
+    <div>
       <Sidebar />
 
-      <main className="flex-1">
+      <main className="flex flex-col">
         <section
-          className=" relative bg-cover bg-center text-white rounded-2xl p-20 mb-10 overflow-hidden"
+          className="relative bg-cover bg-center self-center-safe text-white rounded-2xl p-20 mb-10 overflow-hidden"
           style={{
-            backgroundImage: "url('/lov-hero.jpg')",
+            backgroundImage: "url('/hero2.jpg')",
           }}
         >
           <div className="relative inset-0 bg-black/10 rounded-2xl " />
@@ -98,7 +98,7 @@ export default function Page() {
             </p>
             <button
               onClick={() => setIsOpen(true)}
-              className="px-4 py-2 bg-blue-950 text-white rounded-lg hover:bg-blue-700 cursor-pointer"
+              className="px-4 py-2 bg-red-700 text-white rounded-lg hover:bg-red-950 cursor-pointer"
             >
               Register
             </button>

@@ -39,7 +39,7 @@ export default function FAQSection() {
     <div>
       <Sidebar />
 
-      <div className="w-[1200px] mt-2">
+      <div className="w-full lg:w-[1200px] mt-2">
         <h1 className="text-3xl mb-6">Frequently Asked Questions</h1>
         <div className="space-y-4">
           {faqs.map((faq, index) => (

@@ -33,7 +33,7 @@ export default function Page() {
               <Album size={20} className="text-amber-700" />
             </div>
 
-            <h1 className="p-4 font-bold">100</h1>
+            <h1 className="p-4 font-bold">9</h1>
           </div>
         </div>
   );

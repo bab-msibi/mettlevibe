@@ -8,7 +8,7 @@ export default function Page() {
         alt="event deatails"
         width={900}
         height={100}
-        className="rounded-md object-contain"
+        className="rounded-md object-cover"
       />
     </div>
   );
