@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+
 import {
   Menu,
   X,
@@ -37,14 +39,14 @@ export default function Sidebar() {
       >
         <nav className="flex flex-col p-4 space-y-3">
           {links.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-blue-950 transition-colors"
             >
               {link.icon}
               <span>{link.name}</span>
-            </a>
+            </Link>
           ))}
         </nav>
       </aside>
