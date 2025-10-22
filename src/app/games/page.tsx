@@ -45,7 +45,7 @@ export default function Page() {
         </div>
         <div className="bg-black-sec bg-cover bg-center text-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-[1.03] hover:brightness-130 transition-all duration-300 transform cursor-pointer flex items-end justify-center h-80"
           style={{
-            backgroundImage: "url('/FPS.jpg')",
+            backgroundImage: "url('/fps.jpg')",
           }}
         >
           <h2 className="text-2xl font-bold mb-4 text-white text-shadow-2xs text-shadow-cyan-950">
